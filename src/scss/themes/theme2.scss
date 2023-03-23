@@ -1,0 +1,89 @@
+// Backgrounds
+$Light-gray-bg: hsl(0, 0%, 90%);
+$Gray-red-bg: hsl(0, 5%, 81%);
+$Very-light-gray-bg: hsl(0, 0%, 93%);
+
+// Keys
+$Cyan-key-bg: hsl(185, 42%, 37%);
+$Cyan-key-shadow: hsl(185, 58%, 25%);
+
+$Orange-key-bg: hsl(25, 98%, 40%);
+$Orange-key-shadow: hsl(25, 99%, 27%);
+
+$Gray-key-bg: hsl(45, 7%, 89%);
+$Gray-key-shadow: hsl(35, 11%, 61%);
+
+// Text
+$Gray-text: hsl(60, 10%, 19%);
+$White-text: hsl(0, 0%, 100%);
+
+body.theme2 {
+   background: $Very-light-gray-bg;
+
+   .calculator-main {
+      /* box-shadow: 0 0 10px $White-text); */
+      background: $Very-light-gray-bg;
+   }
+
+   .theme-menu {
+      color: $Gray-text;
+   }
+
+   .theme-controls .theme-switcher-container {
+      background: $Gray-red-bg;
+      cursor: pointer;
+   }
+
+   .theme-switcher-container .theme__switcher-thumb {
+      background: $Orange-key-bg;
+
+      &:hover {
+         background: lighten($color: $Orange-key-bg, $amount: 10%);
+      }
+   }
+
+   .display {
+      background: $White-text;
+   }
+
+   .display input {
+      color: $Gray-text;
+   }
+
+   .numpad {
+      background-color: $Gray-red-bg;
+   }
+
+   .number-btn {
+      background: $Gray-key-bg;
+      color: $Gray-text;
+      box-shadow: 0 3px 0 $Gray-key-shadow;
+
+      &:hover {
+         transform: translateY(2%);
+         background: lighten($color: $Gray-key-bg, $amount: 15%);
+      }
+   }
+
+   .number-btn:is(.btn--del,
+      .btn--reset) {
+      background: $Cyan-key-bg;
+      color: $White-text;
+
+      box-shadow: 0 3px 0 $Cyan-key-shadow;
+
+      &:hover {
+         background: lighten($color: $Cyan-key-bg, $amount: 15%);
+      }
+   }
+
+   .btn--result {
+      background: $Orange-key-bg;
+      color: $White-text;
+      box-shadow: 0 3px 0 $Orange-key-shadow;
+
+      &:hover {
+         background: lighten($color: $Orange-key-bg, $amount: 10%);
+      }
+   }
+}

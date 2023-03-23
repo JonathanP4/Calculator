@@ -1,0 +1,87 @@
+// Backgrounds
+$Violet-main-bg: hsl(268, 75%, 9%);
+$Violet-bg: hsl(268, 71%, 12%);
+
+// Keys
+$Violet-key-bg: hsl(281, 89%, 26%);
+$Magenta-key-shadow: hsl(285, 91%, 52%);
+
+$Cyan-key-bg: hsl(176, 100%, 44%);
+$Cyan-key-shadow: hsl(177, 92%, 70%);
+
+$Dark-violet-key-bg: hsl(268, 47%, 21%);
+$Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+// Text
+$Light-yellow: hsl(52, 100%, 62%);
+$Very-dark-blue: hsl(198, 20%, 13%);
+$White-text: hsl(0, 0%, 100%);
+
+body.theme3 {
+   background: $Violet-main-bg;
+
+   .calculator-main {
+      /* box-shadow: 0 0 10px $White-text); */
+      background: $Violet-main-bg;
+   }
+
+   .theme-menu {
+      color: $Light-yellow;
+   }
+
+   .theme-controls .theme-switcher-container {
+      background: $Violet-bg;
+      cursor: pointer;
+   }
+
+   .theme-switcher-container .theme__switcher-thumb {
+      background: $Cyan-key-bg;
+
+      &:hover {
+         background: lighten($color: $Cyan-key-bg, $amount: 10%);
+      }
+   }
+
+   .display {
+      background: $Violet-bg;
+   }
+
+   .display input {
+      color: $Light-yellow;
+   }
+
+   .numpad {
+      background-color: $Violet-bg;
+   }
+
+   .number-btn {
+      background: $Dark-violet-key-bg;
+      color: $Light-yellow;
+      box-shadow: 0 3px 0 $Magenta-key-shadow;
+
+      &:hover {
+         background: lighten($color: $Dark-violet-key-bg, $amount: 15%);
+      }
+   }
+
+   .number-btn:is(.btn--del,
+      .btn--reset) {
+      background: $Violet-key-bg;
+      color: $White-text;
+      box-shadow: 0 3px 0 $Magenta-key-shadow;
+
+      &:hover {
+         background: lighten($color: $Violet-key-bg, $amount: 15%);
+      }
+   }
+
+   .btn--result {
+      background: $Cyan-key-bg;
+      color: $Very-dark-blue;
+      box-shadow: 0 3px 0 $Cyan-key-shadow;
+
+      &:hover {
+         background: lighten($color: $Cyan-key-bg, $amount: 10%);
+      }
+   }
+}

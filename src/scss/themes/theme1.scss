@@ -1,0 +1,87 @@
+/*Backgrounds*/
+$Desaturated-blue-bg: hsl(222, 26%, 31%);
+$Desaturated-blue-toggle: hsl(223, 31%, 20%);
+$Desaturated-blue-screen: hsl(224, 36%, 15%);
+
+/* Keys */
+$Desaturated-blue-key: hsl(225, 21%, 49%);
+$Desaturated-blue-shadow: hsl(224, 28%, 35%);
+
+$Red-key: hsl(6, 63%, 50%);
+$Dark-red-shadow: hsl(6, 70%, 34%);
+
+$Gray-orange-bg: hsl(30, 25%, 89%);
+$Gray-orange-shadow: hsl(28, 16%, 65%);
+
+/* Text */
+$Gray-blue-text: hsl(221, 14%, 31%);
+$White-text: hsl(0, 0%, 100%);
+
+body.theme1 {
+   background: $Desaturated-blue-bg;
+
+   .calculator-main {
+      /* box-shadow: 0 0 10px $White-text); */
+      background: $Desaturated-blue-bg;
+   }
+
+   .theme-menu {
+      color: $White-text;
+   }
+
+   .theme-controls .theme-switcher-container {
+      background: $Desaturated-blue-toggle;
+      cursor: pointer;
+   }
+
+   .theme-switcher-container .theme__switcher-thumb {
+      background: $Red-key;
+
+      &:hover {
+         background: lighten($color: $Red-key, $amount: 10%);
+      }
+   }
+
+   .display {
+      background: $Desaturated-blue-screen;
+   }
+
+   .display input {
+      color: $White-text;
+   }
+
+   .numpad {
+      background-color: $Desaturated-blue-toggle;
+   }
+
+   .number-btn {
+      background: $Gray-orange-bg;
+      color: $Gray-blue-text;
+      box-shadow: 0 3px 0 $Gray-orange-shadow;
+
+      &:hover {
+         background: lighten($color: $Gray-orange-bg, $amount: 15%);
+      }
+   }
+
+   .number-btn:is(.btn--del,
+      .btn--reset) {
+      background: $Desaturated-blue-key;
+      color: $White-text;
+      box-shadow: 0 3px 0 $Desaturated-blue-shadow;
+
+      &:hover {
+         background: lighten($color: $Desaturated-blue-key, $amount: 15%);
+      }
+   }
+
+   .btn--result {
+      background: $Red-key;
+      color: $White-text;
+      box-shadow: 0 3px 0 $Dark-red-shadow;
+
+      &:hover {
+         background: lighten($color: $Red-key, $amount: 10%);
+      }
+   }
+}
