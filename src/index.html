@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
    <link rel="stylesheet" href="scss/main.scss">
-   <script defer type="module" src="./ts/app.ts"></script>
+   <script type="module" src="./ts/app.ts"></script>
    <title>Calculator Web App</title>
 </head>
 
@@ -16,7 +16,7 @@
       <div class="calculator-main">
          <div class="theme-menu">
             <div>
-               <h2>calc</h2>
+               <h1>calc</h1>
             </div>
             <div class="theme-controls">
                <span>Theme</span>
@@ -27,6 +27,9 @@
                      <span>3</span>
                   </div>
                   <div class="theme-switcher-container">
+                     <label class="switch-theme-label" for="hidden-range">
+                        Switch theme
+                     </label>
                      <input type="range" name="" id="hidden-range" min="0" max="2" value="0">
                      <div class="theme__switcher-thumb"></div>
                   </div>
@@ -35,7 +38,8 @@
          </div>
 
          <div class="display">
-            <input type="text" disabled>
+            <label class="display-label" for="display">Calculator display</label>
+            <input id="display" type="text" disabled>
          </div>
 
          <div class="numpad">

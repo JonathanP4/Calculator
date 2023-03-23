@@ -29,6 +29,10 @@ main {
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   h1 {
+      font-size: 1.5rem;
+   }
 }
 
 .theme-controls {
@@ -47,6 +51,10 @@ main {
       padding: 5px;
       border-radius: 5rem;
       width: 70px;
+
+      .switch-theme-label {
+         display: none;
+      }
 
       #hidden-range {
          position: absolute;
@@ -76,6 +84,10 @@ main {
    padding: 1.5rem 1rem;
    border-radius: .6rem;
    margin: 1rem 0;
+
+   .display-label {
+      display: none;
+   }
 }
 
 .display input {
