@@ -9,15 +9,19 @@
    transition: background .3s;
 }
 
+body {
+   min-height: 630px;
+}
 
 main {
    display: grid;
    height: 100vh;
+   min-height: 630px;
    place-content: center;
 }
 
 .calculator-main {
-   /* box-shadow: 0 0 10px $White-text); */
+   max-width: 490px;
    padding: 1rem;
 }
 
@@ -118,4 +122,36 @@ main {
 
 .btn--result {
    grid-column: 3 / 5;
+}
+
+.attribution {
+   font-size: 11px;
+   padding: 10px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+
+   a {
+      color: hsl(228, 45%, 44%);
+   }
+}
+
+@media (max-width: 700px) {
+   :root {
+      font-size: 14px;
+   }
+
+   main {
+      height: 100svh;
+   }
+
+   .calculator-main {
+      margin: 0 auto;
+      padding: 0;
+   }
+
+   .numpad {
+      grid-template-columns: repeat(4, auto);
+   }
 }

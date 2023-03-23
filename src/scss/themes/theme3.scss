@@ -84,4 +84,12 @@ body.theme3 {
          background: lighten($color: $Cyan-key-bg, $amount: 10%);
       }
    }
+
+   .attribution {
+      color: $White-text;
+
+      a {
+         color: $Cyan-key-bg;
+      }
+   }
 }
